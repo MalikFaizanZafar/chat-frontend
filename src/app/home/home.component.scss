@@ -1,0 +1,286 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+rect.bordered {
+  stroke: #E6E6E6;
+  stroke-width:2px;   
+}
+
+text.mono {
+  font-size: 9pt;
+  font-family: Consolas, courier;
+  fill: #aaa;
+}
+
+text.axis-workweek {
+  fill: #000;
+}
+
+text.axis-worktime {
+  fill: #000;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+.slice {
+  cursor: pointer;
+}
+
+.slice .main-arc {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+  fill: none;
+}
+
+.slice text {
+  pointer-events: none;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+
+#container {
+  height: 400px;
+}
+
+@keyframes pulse {
+  from { opacity: 1; }
+  50% { opacity: 0.3 }
+  to { opacity: 1 }
+}
+
+path:nth-child( 3 ) {
+  animation-name: pulse;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.bubbles {
+  stroke-width: 1px;
+  stroke: black;
+  opacity: .8
+}
+.bubbles:hover {
+  stroke: black;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+}
+
+svg {
+  -webkit-filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.3) );
+  filter: drop-shadow( 0px 3px 3px rgba(0,0,0,.25) );
+}
+
+/*Styling for the lines connecting the labels to the slices*/
+polyline{
+  opacity: .3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
+}
+
+/* Make the percentage on the text labels bold*/
+.labelName tspan {
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* In biology we generally italicise species names. */
+.labelName {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.arc path {
+  stroke: #fff;
+}
+text {
+  font-size:12px
+}
+
+#chart{
+  text-align: center;
+}
+
+.monthArc {
+  fill: white;
+  stroke: #AAAAAA;
+}
+
+.monthText {
+  fill: #6B6B6B;
+  font-size: 13px;
+  font-family: 'Courgette', sans-serif;
+}
